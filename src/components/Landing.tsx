@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+// import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -13,15 +13,9 @@ const navigation = [
 
 export default function Landing() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [userAddress, setUserAddress] = useState(null);
-
-  useEffect(() => {
-
-  }, [userAddress]); // Add userAddress as a dependency
-
 
   return (
-    <div className="bg-gray-900 w-screen h-screen">
+    <div className="bg-gray-900 w-screen h-full">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -142,7 +136,7 @@ export default function Landing() {
               fugiat veniam occaecat fugiat aliqua.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <ConnectButton />
+              {/*<ConnectButton />*/}
               <a
                 href="#"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
